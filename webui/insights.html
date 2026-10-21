@@ -40,7 +40,7 @@
 
         <template x-if="!$store.a0LlmApiVisorInsights.trackingEnabled && !$store.a0LlmApiVisorInsights.hasData()">
           <div class="avi-empty">
-            <span class="material-symbols-outlined">insights</span>
+            <x-icon name="insights"></x-icon>
             <p>Usage insights is turned off.</p>
             <p class="avi-empty-hint">Enable "Usage insights" in the plugin settings to start collecting local statistics.</p>
           </div>
@@ -48,7 +48,7 @@
 
         <template x-if="$store.a0LlmApiVisorInsights.trackingEnabled && !$store.a0LlmApiVisorInsights.hasData()">
           <div class="avi-empty">
-            <span class="material-symbols-outlined">hourglass_empty</span>
+            <x-icon name="hourglass_empty"></x-icon>
             <p>No statistics collected yet.</p>
             <p class="avi-empty-hint">Data appears here after the visor observes API activity. Keep using the LLM API and check back soon.</p>
           </div>
@@ -400,7 +400,7 @@
     text-align: center;
   }
 
-  .avi-empty .material-symbols-outlined {
+  .avi-empty x-icon {
     font-size: 2.2rem;
     opacity: 0.6;
   }

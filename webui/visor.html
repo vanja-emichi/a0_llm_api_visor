@@ -36,7 +36,7 @@
               title="Refresh"
               aria-label="Refresh LLM API visor"
             >
-              <span class="material-symbols-outlined" :class="{ spinning: $store.a0LlmApiVisor.loading }">refresh</span>
+              <x-icon name="refresh" :class="{ spinning: $store.a0LlmApiVisor.loading }"></x-icon>
             </button>
             <button
               x-show="$store.a0LlmApiVisor.insightsEnabled()"
@@ -46,7 +46,7 @@
               title="Usage insights"
               aria-label="Open LLM API usage insights"
             >
-              <span class="material-symbols-outlined">insights</span>
+              <x-icon name="insights"></x-icon>
             </button>
             <button
               type="button"
@@ -55,7 +55,7 @@
               title="Settings"
               aria-label="Open LLM API visor settings"
             >
-              <span class="material-symbols-outlined">tune</span>
+              <x-icon name="tune"></x-icon>
             </button>
           </div>
         </div>
@@ -85,7 +85,7 @@
         </div>
 
         <div class="a0-llm-api-visor-wallet" x-show="$store.a0LlmApiVisor.showWalletLine()">
-          <span class="material-symbols-outlined" aria-hidden="true">account_balance_wallet</span>
+          <x-icon name="account_balance_wallet" aria-hidden="true"></x-icon>
           <span x-text="$store.a0LlmApiVisor.walletLabel()"></span>
           <strong x-text="$store.a0LlmApiVisor.walletStakeLabel()"></strong>
         </div>
@@ -191,7 +191,7 @@
     opacity: 0.42;
   }
 
-  .a0-llm-api-visor-icon .material-symbols-outlined {
+  .a0-llm-api-visor-icon x-icon {
     font-size: 1rem;
   }
 
@@ -270,7 +270,7 @@
     min-height: 1rem;
   }
 
-  .a0-llm-api-visor-wallet .material-symbols-outlined {
+  .a0-llm-api-visor-wallet x-icon {
     flex: 0 0 auto;
     font-size: 0.95rem;
   }

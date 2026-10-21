@@ -31,6 +31,59 @@
 
         <div class="field">
           <div class="field-label">
+            <div class="field-title">API base URL</div>
+            <div class="field-description">Base URL of the Agent Zero LLM API used for credit and usage lookups.</div>
+          </div>
+          <div class="field-control">
+            <input
+              type="text"
+              x-model.trim="config.api_base_url"
+              placeholder="https://api.agent-zero.ai"
+              spellcheck="false"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">
+            <div class="field-title">Dashboard URL</div>
+            <div class="field-description">Opened by the dashboard button in the sidebar panel.</div>
+          </div>
+          <div class="field-control">
+            <input
+              type="text"
+              x-model.trim="config.dashboard_url"
+              placeholder="https://www.agent-zero.ai/p/community/api-dashboard/"
+              spellcheck="false"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">
+            <div class="field-title">Refresh interval (seconds)</div>
+            <div class="field-description">How often the sidebar panel re-fetches API status. 0 disables auto-refresh.</div>
+          </div>
+          <div class="field-control">
+            <input type="number" min="0" max="3600" step="30" x-model.number="config.refresh_interval_seconds" />
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="field-label">
+            <div class="field-title">Cache seconds</div>
+            <div class="field-description">How long fetched API responses stay cached before a network refresh is forced.</div>
+          </div>
+          <div class="field-control">
+            <input type="number" min="0" max="600" step="5" x-model.number="config.cache_seconds" />
+          </div>
+        </div>
+
+
+        <div class="field">
+          <div class="field-label">
             <div class="field-title">Show wallet metrics</div>
             <div class="field-description">Use personal wallet credits as the primary sidebar value. Turn off only for the global pool view.</div>
           </div>
